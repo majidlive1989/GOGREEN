@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/ionicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/unminified.css" />
+
+    <title>p</title>
+  </head>
+  <body class="h-screen">
+    <header
+      class="flex flex-row justify-between p-9 z-20 fixed w-full bg-black opacity-45"
+    >
+      <div class="flex flex-row justify-between w-full">
+        <div class="text-green-500 text-4xl font-bold font-roboto">
+          <a href="#">GO GREEN</a>
+        </div>
+        <div class="flex flex-row left-7">
+          <ul
+            class="list-none flex flex-row gap-4 text-white *:hover:text-green-500"
+          >
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>SERVICES</li>
+            <li>PORTFOLIO</li>
+            <li>PRICE</li>
+            <li>
+              <select name="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+              </select>
+            </li>
+            <li>CONTACT</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="h-full relative">
+      <div class="h-full">
+        <div class="slider relative h-full">
+          <div
+            class="backdrop-grayscale slide current bg-[url(../src/img/slider-1.jpg)] bg-cover absolute h-full w-full"
+          >
+            <div class=""></div>
+            <div
+              class="content absolute flex flex-col justify-center items-center -translate-1/2 top-1/2 left-1/2 p-8 gap-5"
+            >
+              <h1 class="text-black font-semibold text-[64px] font-nunito">
+                Game Development
+              </h1>
+              <p>
+                Aenean volutpat, dolor eu finibus rhoncus, elit felis vehicula
+                nunc, ut pulvinar ex diam nec lacus. Phasellus sit amet rhoncus
+                turpis. Aenean tincidunt auctor purus
+              </p>
+              <button
+                class="bg-green-500 text-[18px] font-semibold text-white px-5 py-2 hover:bg-white hover:text-green-500"
+              >
+                GET START
+              </button>
+            </div>
+          </div>
+          <!-- <div
+            class="slide h-full w-full bg-[url(../src/img/slider-2.jpg)] bg-cover absolute"
+          >
+            <div
+              class="content bg-[#e5ebf3cc] absolute bottom-20 left-[1px] w-[600px] p-8"
+            >
+              <h1 class="font-serif font-bold">Slide Two</h1>
+              <p class="wrap-break-word text-wrap">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Officiis autem aliquam itaque libero delectus temporibus?
+              </p>
+            </div>
+          </div>
+          <div
+            class="slide h-full w-full bg-[url(../src/img/slider-3.jpg)] bg-cover absolute"
+          >
+            <div
+              class="content bg-[#e5ebf3cc] absolute bottom-20 left-[1px] w-[600px] p-8"
+            >
+              <h1>Slide Three</h1>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Officiis autem aliquam itaque libero delectus temporibus?
+              </p>
+            </div>
+          </div> -->
+
+          <section>
+            <button
+              id="next"
+              class="absolute bottom-80 right-5 border-2 border-white p-3 rounded-4xl group hover:bg-white"
+            >
+              <svg
+                width="20px"
+                height="20px"
+                viewBox="0 0 48 48"
+                version="1"
+                xmlns="http://www.w3.org/2000/svg"
+                enable-background="new 0 0 48 48"
+              >
+                <polygon
+                  class="group-hover:fill-black"
+                  fill="#ffffff"
+                  points="17.1,5 14,8.1 29.9,24 14,39.9 17.1,43 36,24"
+                />
+              </svg>
+            </button>
+            <button
+              id="prev"
+              class="absolute bottom-80 left-5 border-2 border-white p-3 rounded-4xl group hover:bg-white"
+            >
+              <svg
+                width="20px"
+                height="20px"
+                viewBox="0 0 48 48"
+                version="1"
+                xmlns="http://www.w3.org/2000/svg"
+                enable-background="new 0 0 48 48"
+              >
+                <polygon
+                  class="group-hover:fill-black"
+                  fill="#ffffff"
+                  points="30.9,43 34,39.9 18.1,24 34,8.1 30.9,5 12,24"
+                />
+              </svg>
+            </button>
+          </section>
+        </div>
+      </div>
+      <!-- third Section -->
+      <section
+        class="flex flex-col items-center justify-center gap-5 pt-8 bg-[#f2f2f2f2]"
+      >
+        <div class="flex-col">
+          <h3
+            class="text-[32px] border-dashed border-b-3 border-b-[#353535] font-bold"
+          >
+            ABOUT US
+          </h3>
+        </div>
+        <div class="w-[600px] flex wrap-normal">
+          <p class="pb-8 wrap-anywhere text-center">
+            Maecenas vel turpis quis lorem aliquam tempus quis non mi.
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas.
+          </p>
+        </div>
+      </section>
+
+      <!-- fourtg -->
+      <section class="flex flex-row justify-around px-9 bg-[#f2f2f2f2]">
+        <div class="w-1/2">
+          <img class="w-[540px] h-[309px]" src="./src/img/about.jpg" alt="" />
+        </div>
+        <div class="w-1/2 flex flex-col">
+          <h2
+            class="pt-5 text-[#1dbf73] hover:text-black font-nunito text-[32px] font-bold"
+          >
+            Welcome to Our Site
+          </h2>
+          <p class="pb-8">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+            condimentum rutrum ligula. Integer ac porttitor mi. In finibus
+            vehicula aliquet. Vestibulum et velit placerat, pretium lorem id,
+            porttitor libero. Suspendisse scelerisque nec arcu a malesuada.
+            Nulla tempus dictum tristique.
+          </p>
+          <button
+            class="bg-[#1dbf73] text-white hover:text-gray-500 hover:bg-[#353535] w-[120px] px-3 py-2"
+          >
+            Read More
+          </button>
+        </div>
+      </section>
+      <!-- card section -->
+      <section class="flex flex-row justify-around gap-4 p-8 bg-[#f2f2f2f2]">
+        <div class="flex flex-col w-[350px] relative">
+          <div class="relative">
+            <img
+              class="w-[350px] h-[200px]"
+              src="./src/img/about-mission.jpg"
+              alt=""
+            />
+          </div>
+          <div class="bg-[#1dbf73] absolute">
+            <i class="ion-ios-disc text-[36px] text-green-500">
+              <svg
+                width="16px"
+                height="16px"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="bi bi-eye"
+              >
+                <path
+                  d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                />
+                <path
+                  d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                />
+              </svg>
+            </i>
+          </div>
+
+          <div class="text-center p-5">
+            <h2 class="font-semibold text-[20px]">Our Mission</h2>
+          </div>
+          <div class="text-[#353535]">
+            <p>
+              Aenean volutpat, dolor eu finibus rhoncus, elit felis vehicula
+              nunc, ut pulvinar ex diam nec lacus. Phasellus sit amet rhoncus
+              turpis. Aenean tincidunt auctor purus, ac sodales sapien sagittis
+            </p>
+          </div>
+          <div class="flex items-center justify-center gap-3 p-4">
+            <button
+              class="items-center bg-green-500 text-[18px] font-semibold text-white px-5 py-2 hover:bg-white hover:text-green-500"
+            >
+              GET START
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col w-[350px]">
+          <div class="">
+            <img
+              class="w-[350px] h-[200px] relative"
+              src="./src/img/about-mission.jpg"
+              alt=""
+            />
+          </div>
+          <div class="relative">
+            <i class="bg-[#1dbf73] text-[36px] absolute -translate-2/3 left-40"
+              ><svg
+                class="group-hover:fill-[#1dbf73]"
+                fill="#ffffff"
+                width="40px"
+                height="40px"
+                viewBox="0 0 256 256"
+                id="Flat"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M205.20361,52.561a11.9831,11.9831,0,0,0-1.76562-1.76575,108.1521,108.1521,0,1,0,1.76562,1.76575ZM170.323,116a43.7392,43.7392,0,0,0-3.91748-9.4353L195.24927,77.721A83.5787,83.5787,0,0,1,211.12915,116ZM148,128a20,20,0,1,1-20-20A20.0226,20.0226,0,0,1,148,128Zm-20,84A84,84,0,1,1,178.27832,60.75049L149.43481,89.594A43.99139,43.99139,0,1,0,170.323,140h40.80615A84.1192,84.1192,0,0,1,128,212Z"
+                />
+              </svg>
+            </i>
+          </div>
+
+          <div class="text-center p-5">
+            <h2 class="font-semibold text-[20px]">Our Mission</h2>
+          </div>
+          <div class="text-[#353535]">
+            <p>
+              Aenean volutpat, dolor eu finibus rhoncus, elit felis vehicula
+              nunc, ut pulvinar ex diam nec lacus. Phasellus sit amet rhoncus
+              turpis. Aenean tincidunt auctor purus, ac sodales sapien sagittis
+            </p>
+          </div>
+          <div class="flex items-center justify-center gap-3 p-4">
+            <button
+              class="items-center hover:text-gray-500 hover:bg-[#353535] bg-green-500 text-[18px] font-semibold text-white px-5 py-2"
+            >
+              GET START
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col w-[350px]">
+          <div class="relative">
+            <img
+              class="w-[350px] h-[200px] relative"
+              src="./src/img/about-mission.jpg"
+              alt=""
+            />
+          </div>
+          <div class="bg-[#1dbf73] top-50 -translate-1/2">
+            <i
+              class="text-[36px] text-green-500 absolute top-50 -translate-1/2"
+            ></i>
+          </div>
+
+          <div class="text-center p-5">
+            <h2 class="font-semibold text-[20px]">Our Mission</h2>
+          </div>
+          <div class="text-[#353535]">
+            <p>
+              Aenean volutpat, dolor eu finibus rhoncus, elit felis vehicula
+              nunc, ut pulvinar ex diam nec lacus. Phasellus sit amet rhoncus
+              turpis. Aenean tincidunt auctor purus, ac sodales sapien sagittis
+            </p>
+          </div>
+          <div class="flex items-center justify-center gap-3 p-4">
+            <button
+              class="items-center bg-green-500 text-[18px] font-semibold text-white px-5 py-2 hover:bg-white hover:text-green-500"
+            >
+              GET START
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- our service title -->
+      <section class="flex flex-col justify-center items-center p-10 gap-3">
+        <h2
+          class="font-semibold text-[38px] border-b-3 border-b-black border-dashed"
+        >
+          Services
+        </h2>
+        <p
+          class="text-wrap w-[600px] text-[#656565] text-center justify-center items-center"
+        >
+          Integer sollicitudin sed nulla non consequat. Nullam vitae erat quis
+          leo accumsan ullamcorper. Suspendisse leo purus, pellentesque posuere.
+        </p>
+      </section>
+      <!-- Our Services -->
+      <section class="flex flex-row">
+        <div class="flex flex-row justify-between p-7 items-center gap-8">
+          <div class="items-center flex flex-col">
+            <svg
+              class="fill-green-500"
+              width="100px"
+              height="100px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-7v2h3a1 1 0 1 1 0 2H8a1 1 0 1 1 0-2h3v-2H4a2 2 0 0 1-2-2V5zm18 11V5H4v11h16z"
+                fill=""
+              />
+            </svg>
+
+            <h4 class="text-center font-semibold"><a href="">Web Design</a></h4>
+            <p class="text-center">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Praesentium.
+            </p>
+          </div>
+          <div class="items-center flex flex-col">
+            <svg
+              class="fill-green-500"
+              width="100px"
+              height="100px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-7v2h3a1 1 0 1 1 0 2H8a1 1 0 1 1 0-2h3v-2H4a2 2 0 0 1-2-2V5zm18 11V5H4v11h16z"
+                fill=""
+              />
+            </svg>
+
+            <h4 class="text-center font-semibold"><a href="">Web Design</a></h4>
+            <p class="text-center">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Praesentium.
+            </p>
+          </div>
+          <div class="items-center flex flex-col">
+            <svg
+              class="fill-green-500"
+              width="100px"
+              height="100px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-7v2h3a1 1 0 1 1 0 2H8a1 1 0 1 1 0-2h3v-2H4a2 2 0 0 1-2-2V5zm18 11V5H4v11h16z"
+                fill=""
+              />
+            </svg>
+
+            <h4 class="text-center font-semibold"><a href="">Web Design</a></h4>
+            <p class="text-center">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Praesentium.
+            </p>
+          </div>
+          <div class="items-center flex flex-col">
+            <svg
+              class="fill-green-500"
+              width="100px"
+              height="100px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-7v2h3a1 1 0 1 1 0 2H8a1 1 0 1 1 0-2h3v-2H4a2 2 0 0 1-2-2V5zm18 11V5H4v11h16z"
+                fill=""
+              />
+            </svg>
+
+            <h4 class="text-center font-semibold"><a href="">Web Design</a></h4>
+            <p class="text-center">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Praesentium.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="flex flex-row">
+        <div class="flex flex-row justify-between p-7 items-center gap-8">
+          <div class="items-center flex flex-col">
+            <svg
+              class="fill-green-500"
+              width="100px"
+              height="100px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-7v2h3a1 1 0 1 1 0 2H8a1 1 0 1 1 0-2h3v-2H4a2 2 0 0 1-2-2V5zm18 11V5H4v11h16z"
+                fill=""
+              />
+            </svg>
+
+            <h4 class="text-center font-semibold"><a href="">Web Design</a></h4>
+            <p class="text-center">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Praesentium.
+            </p>
+          </div>
+          <div class="items-center flex flex-col">
+            <svg
+              class="fill-green-500"
+              width="100px"
+              height="100px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-7v2h3a1 1 0 1 1 0 2H8a1 1 0 1 1 0-2h3v-2H4a2 2 0 0 1-2-2V5zm18 11V5H4v11h16z"
+                fill=""
+              />
+            </svg>
+
+            <h4 class="text-center font-semibold"><a href="">Web Design</a></h4>
+            <p class="text-center">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Praesentium.
+            </p>
+          </div>
+          <div class="items-center flex flex-col">
+            <svg
+              class="fill-green-500"
+              width="100px"
+              height="100px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-7v2h3a1 1 0 1 1 0 2H8a1 1 0 1 1 0-2h3v-2H4a2 2 0 0 1-2-2V5zm18 11V5H4v11h16z"
+                fill=""
+              />
+            </svg>
+
+            <h4 class="text-center font-semibold"><a href="">Web Design</a></h4>
+            <p class="text-center">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Praesentium.
+            </p>
+          </div>
+          <div class="items-center flex flex-col">
+            <svg
+              class="fill-green-500"
+              width="100px"
+              height="100px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-7v2h3a1 1 0 1 1 0 2H8a1 1 0 1 1 0-2h3v-2H4a2 2 0 0 1-2-2V5zm18 11V5H4v11h16z"
+                fill=""
+              />
+            </svg>
+
+            <h4 class="text-center font-semibold"><a href="">Web Design</a></h4>
+            <p class="text-center">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Praesentium.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- section call action -->
+      <section class="bg-[#1dbf73 ] flex flex-col"></section>
+    </main>
+
+    <div id="app"></div>
+    <script src="vendor/isotope/isotope.pkgd.min.js"></script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
