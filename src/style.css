@@ -9,3 +9,30 @@
 @theme {
   --font-nunito: "Nunito", sans-serif;
 }
+.show {
+  display: none;
+}
+.beforeBg::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.slides {
+  opacity: 0;
+}
+.slides.current {
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+
+.slides .content {
+  opacity: 0;
+}
+.slides.current .content {
+  opacity: 1;
+  transition: all 0.1s ease;
+}

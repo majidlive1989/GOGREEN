@@ -41,96 +41,110 @@
     </header>
     <main class="h-full relative">
       <div class="h-full">
-        <div class="slider relative h-full">
+        <div class="h-full relative all">
           <div
-            class="backdrop-grayscale slide current bg-[url(../src/img/slider-1.jpg)] bg-cover absolute h-full w-full"
+            class="slides current beforeBg flex flex-col gap-8 justify-center items-center w-full h-full absolute bg-[url(src/img/slider-1.jpg)]"
           >
-            <div class=""></div>
             <div
-              class="content absolute flex flex-col justify-center items-center -translate-1/2 top-1/2 left-1/2 p-8 gap-5"
+              class="flex flex-col gap-8 justify-center items-center content"
             >
-              <h1 class="text-black font-semibold text-[64px] font-nunito">
-                Game Development
-              </h1>
-              <p>
-                Aenean volutpat, dolor eu finibus rhoncus, elit felis vehicula
-                nunc, ut pulvinar ex diam nec lacus. Phasellus sit amet rhoncus
-                turpis. Aenean tincidunt auctor purus
+              <p class="text-6xl text-white font-semibold z-30">
+                Web Development
               </p>
-              <button
-                class="bg-green-500 text-[18px] font-semibold text-white px-5 py-2 hover:bg-white hover:text-green-500"
+              <span
+                class="text-lg text-white z-30 font-light px-[330px] text-center"
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                condimentum rutrum ligula. Integer ac porttitor mi. In finibus
+                vehicula aliquet. Vestibulum et velit placerat.</span
               >
-                GET START
+              <button
+                class="py-3 px-8 text-5 text-white bg-[#1dbf73] font-semibold z-30 hover:text-[#1dbf73] hover:bg-white transition-all"
+              >
+                GET STARTED
               </button>
             </div>
           </div>
-          <!-- <div
-            class="slide h-full w-full bg-[url(../src/img/slider-2.jpg)] bg-cover absolute"
+          <div
+            class="slides beforeBg flex flex-col gap-8 justify-center items-center w-full h-full absolute bg-[url(src/img/slider-2.jpg)]"
           >
             <div
-              class="content bg-[#e5ebf3cc] absolute bottom-20 left-[1px] w-[600px] p-8"
+              class="flex flex-col gap-8 justify-center items-center content"
             >
-              <h1 class="font-serif font-bold">Slide Two</h1>
-              <p class="wrap-break-word text-wrap">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Officiis autem aliquam itaque libero delectus temporibus?
+              <p class="text-6xl text-white font-semibold z-30">
+                App Development
               </p>
+              <span
+                class="text-lg text-white z-30 font-light px-[330px] text-center"
+                >Maecenas vel turpis quis lorem aliquam tempus quis non mi.
+                Pellentesque habitant morbi tristique senectus et netus et
+                malesuada fames ac turpis egestas.</span
+              >
+              <button
+                class="py-3 px-8 text-5 text-white bg-[#1dbf73] font-semibold z-30 hover:text-[#1dbf73] hover:bg-white transition-all"
+              >
+                GET STARTED
+              </button>
             </div>
           </div>
           <div
-            class="slide h-full w-full bg-[url(../src/img/slider-3.jpg)] bg-cover absolute"
+            class="slides beforeBg flex flex-col gap-8 justify-center items-center w-full h-full absolute bg-[url(src/img/slider-3.jpg)]"
           >
             <div
-              class="content bg-[#e5ebf3cc] absolute bottom-20 left-[1px] w-[600px] p-8"
+              class="flex flex-col gap-8 justify-center items-center content"
             >
-              <h1>Slide Three</h1>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Officiis autem aliquam itaque libero delectus temporibus?
+              <p class="text-6xl text-white font-semibold z-30">
+                Game Development
               </p>
+              <span
+                class="text-lg text-white z-30 font-light px-[330px] text-center"
+                >Aenean volutpat, dolor eu finibus rhoncus, elit felis vehicula
+                nunc, ut pulvinar ex diam nec lacus. Phasellus sit amet rhoncus
+                turpis. Aenean tincidunt auctor purus</span
+              >
+              <button
+                class="py-3 px-8 text-5 text-white bg-[#1dbf73] font-semibold z-30 hover:text-[#1dbf73] hover:bg-white transition-all"
+              >
+                GET STARTED
+              </button>
             </div>
-          </div> -->
-
-          <section>
-            <button
-              id="next"
-              class="absolute bottom-80 right-5 border-2 border-white p-3 rounded-4xl group hover:bg-white"
-            >
-              <svg
-                width="20px"
-                height="20px"
-                viewBox="0 0 48 48"
-                version="1"
-                xmlns="http://www.w3.org/2000/svg"
-                enable-background="new 0 0 48 48"
-              >
-                <polygon
-                  class="group-hover:fill-black"
-                  fill="#ffffff"
-                  points="17.1,5 14,8.1 29.9,24 14,39.9 17.1,43 36,24"
-                />
-              </svg>
-            </button>
-            <button
-              id="prev"
-              class="absolute bottom-80 left-5 border-2 border-white p-3 rounded-4xl group hover:bg-white"
-            >
-              <svg
-                width="20px"
-                height="20px"
-                viewBox="0 0 48 48"
-                version="1"
-                xmlns="http://www.w3.org/2000/svg"
-                enable-background="new 0 0 48 48"
-              >
-                <polygon
-                  class="group-hover:fill-black"
-                  fill="#ffffff"
-                  points="30.9,43 34,39.9 18.1,24 34,8.1 30.9,5 12,24"
-                />
-              </svg>
-            </button>
-          </section>
+          </div>
+        </div>
+        <button id="next" class="absolute bottom-80 right-5 group">
+          <svg
+            width="26px"
+            height="26px"
+            viewBox="0 0 48 48"
+            version="1"
+            xmlns="http://www.w3.org/2000/svg"
+            enable-background="new 0 0 48 48"
+          >
+            <polygon
+              class="group-hover:fill-white"
+              fill="#cccac4"
+              points="17.1,5 14,8.1 29.9,24 14,39.9 17.1,43 36,24"
+            />
+          </svg>
+        </button>
+        <button id="prev" class="absolute bottom-80 left-5 group">
+          <svg
+            width="26px"
+            height="26px"
+            viewBox="0 0 48 48"
+            version="1"
+            xmlns="http://www.w3.org/2000/svg"
+            enable-background="new 0 0 48 48"
+          >
+            <polygon
+              class="group-hover:fill-white"
+              fill="#cccac4"
+              points="30.9,43 34,39.9 18.1,24 34,8.1 30.9,5 12,24"
+            />
+          </svg>
+        </button>
+        <div class="flex absolute bottom-5 left-1/2 -translate-x-1/2 gap-2">
+          <div class="w-8 h-1 main changeColor"></div>
+          <div class="w-8 h-1 main"></div>
+          <div class="w-8 h-1 main"></div>
         </div>
       </div>
       <!-- third Section -->
@@ -495,7 +509,312 @@
         </div>
       </section>
       <!-- section call action -->
-      <section class="bg-[#1dbf73 ] flex flex-col"></section>
+      <section
+        class="bg-[#1dbf73] flex flex-col justify-center items-center gap-5 p-8"
+      >
+        <div>
+          <h2 class="text-white text-[32px] border-b-6 border-dashed">
+            Call to Action
+          </h2>
+        </div>
+        <div>
+          <p class="text-white">
+            Integer sollicitudin sed nulla non consequat. Nullam vitae erat quis
+            leo accumsan ullamcorper. Suspendisse leo purus, pellentesque
+            posuere.
+          </p>
+          <div class="flex flex-row justify-center gap-7 p-9">
+            <button
+              class="bg-white text-[18px] item-center justify-center font-semibold text-green-500 px-5 py-2 hover:bg-gray-600 hover:text-white"
+            >
+              Call To Action
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- price table  -->
+      <section
+        class="flex flex-col justify-center items-center p-10 gap-3 bg-[#f2f2f2]"
+      >
+        <h2
+          class="font-semibold text-[38px] border-b-3 border-b-black border-dashed"
+        >
+          Our Pricing
+        </h2>
+        <p
+          class="text-wrap w-[600px] text-[#656565] text-center justify-center items-center"
+        >
+          Integer sollicitudin sed nulla non consequat. Nullam vitae erat quis
+          leo accumsan ullamcorper. Suspendisse leo purus, pellentesque posuere.
+        </p>
+      </section>
+      <section class="flex flex-row bg-[#f2f2f2] pb-8">
+        <div
+          class="price-content flex flex-col items-center justify-center w-1/3 px-8 gap-5"
+        >
+          <div
+            class="flex flex-col bg-gray-700 text-white p-9 w-full items-center justify-center"
+          >
+            <p class="price-title">Silver</p>
+            <h2 class="price-amount">9.<span>99</span></h2>
+            <p class="price-date">Per Month</p>
+          </div>
+          <ul class="price-details">
+            <li>
+              <i class="ion-md-checkmark"></i><strong>HTML5</strong> and
+              <strong>CSS3</strong>
+            </li>
+            <li>
+              <i class="ion-md-checkmark"></i><strong>Bootstrap 4</strong>
+            </li>
+            <li>
+              <i class="ion-md-checkmark"></i
+              ><strong>Well-commented</strong> code
+            </li>
+            <li>
+              <i class="ion-md-close"></i><strong>IonIcons</strong> integrated
+            </li>
+            <li>
+              <i class="ion-md-close"></i>Free
+              <strong>Google Font</strong> integrated
+            </li>
+            <li>
+              <i class="ion-md-close"></i><strong>Responsive</strong> design
+            </li>
+          </ul>
+          <button
+            class="items-center bg-green-500 text-[18px] font-semibold text-white px-5 py-2 hover:bg-white hover:text-green-500"
+          >
+            <a href="#" class="btn mian-btn price-btn">Buy Now</a>
+          </button>
+        </div>
+        <div
+          class="price-content flex flex-col items-center justify-center w-1/3 px-8 gap-5"
+        >
+          <div
+            class="flex flex-col bg-gray-700 text-white p-9 w-full items-center justify-center"
+          >
+            <p class="price-title">Silver</p>
+            <h2 class="price-amount">9.<span>99</span></h2>
+            <p class="price-date">Per Month</p>
+          </div>
+          <ul class="price-details">
+            <li>
+              <i class="ion-md-checkmark"></i><strong>HTML5</strong> and
+              <strong>CSS3</strong>
+            </li>
+            <li>
+              <i class="ion-md-checkmark"></i><strong>Bootstrap 4</strong>
+            </li>
+            <li>
+              <i class="ion-md-checkmark"></i
+              ><strong>Well-commented</strong> code
+            </li>
+            <li>
+              <i class="ion-md-close"></i><strong>IonIcons</strong> integrated
+            </li>
+            <li>
+              <i class="ion-md-close"></i>Free
+              <strong>Google Font</strong> integrated
+            </li>
+            <li>
+              <i class="ion-md-close"></i><strong>Responsive</strong> design
+            </li>
+          </ul>
+          <button
+            class="items-center bg-green-500 text-[18px] font-semibold text-white px-5 py-2 hover:bg-white hover:text-green-500"
+          >
+            <a href="#" class="btn mian-btn price-btn">Buy Now</a>
+          </button>
+        </div>
+        <div
+          class="price-content flex flex-col items-center justify-center w-1/3 px-8 gap-5"
+        >
+          <div
+            class="flex flex-col bg-gray-700 text-white p-9 w-full items-center justify-center"
+          >
+            <p class="price-title">Silver</p>
+            <h2 class="price-amount">9.<span>99</span></h2>
+            <p class="price-date">Per Month</p>
+          </div>
+          <ul class="price-details">
+            <li>
+              <i class="ion-md-checkmark"></i><strong>HTML5</strong> and
+              <strong>CSS3</strong>
+            </li>
+            <li>
+              <i class="ion-md-checkmark"></i><strong>Bootstrap 4</strong>
+            </li>
+            <li>
+              <i class="ion-md-checkmark"></i
+              ><strong>Well-commented</strong> code
+            </li>
+            <li>
+              <i class="ion-md-close"></i><strong>IonIcons</strong> integrated
+            </li>
+            <li>
+              <i class="ion-md-close"></i>Free
+              <strong>Google Font</strong> integrated
+            </li>
+            <li>
+              <i class="ion-md-close"></i><strong>Responsive</strong> design
+            </li>
+          </ul>
+          <button
+            class="items-center bg-green-500 text-[18px] font-semibold text-white px-5 py-2 hover:bg-white hover:text-green-500"
+          >
+            <a href="#" class="btn mian-btn price-btn">Buy Now</a>
+          </button>
+        </div>
+      </section>
+      <!-- skills -->
+      <section
+        class="flex flex-col justify-center items-center p-10 gap-3 bg-white"
+      >
+        <h2
+          class="font-semibold text-[38px] border-b-3 border-b-black border-dashed"
+        >
+          Our Skills
+        </h2>
+        <p
+          class="text-wrap w-[600px] text-[#656565] text-center justify-center items-center"
+        >
+          Quisque ac tincidunt ipsum egestas viverra mi, ac vehicula enim
+          consectetur quis. In imperdiet varius elit, ut convallis lectus luctus
+          quis.
+        </p>
+      </section>
+      <section class="flex flex-col justify-center items-center p-8 gap-6 mx-4">
+        <!-- Progress -->
+        <div
+          class="flex w-full h-8 bg-gray-200 overflow-hidden dark:bg-neutral-700"
+          role="progressbar"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <div class="bg-green-600">
+            <span class="text-white px-2 py-2">Html</span>
+          </div>
+          <div
+            class="flex flex-col justify-center h-9 overflow-hidden bg-green-600 text-md text-white text-end px-5 whitespace-nowrap dark:bg-blue-500 transition duration-500"
+            style="width: 100%"
+          >
+            100%
+          </div>
+        </div>
+        <!-- End Progress -->
+        <div
+          class="flex w-full h-8 bg-gray-200 overflow-hidden dark:bg-neutral-700"
+          role="progressbar"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <div class="bg-[#17a2b8]">
+            <span class="text-white px-2 py-2">CSS</span>
+          </div>
+          <div
+            class="flex flex-col justify-center h-9 overflow-hidden bg-[#17a2b8] text-md text-white text-end px-5 whitespace-nowrap dark:bg-blue-500 transition duration-500"
+            style="width: 90%"
+          >
+            90%
+          </div>
+        </div>
+        <!-- End Progress -->
+        <div
+          class="flex w-full h-8 bg-gray-200 overflow-hidden dark:bg-neutral-700"
+          role="progressbar"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <div class="bg-[#ffc107]">
+            <span class="text-white px-2 py-2">JQUERY</span>
+          </div>
+          <div
+            class="flex flex-col justify-center h-9 overflow-hidden bg-[#ffc107] text-md text-white text-end px-5 whitespace-nowrap dark:bg-blue-500 transition duration-500"
+            style="width: 80%"
+          >
+            80%
+          </div>
+        </div>
+        <!-- End Progress -->
+        <div
+          class="flex w-full h-8 bg-gray-200 overflow-hidden dark:bg-neutral-700"
+          role="progressbar"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <div class="bg-[#dc3545]">
+            <span class="text-white px-2 py-2">PHP</span>
+          </div>
+          <div
+            class="flex flex-col justify-center h-9 overflow-hidden bg-[#dc3545] text-md text-white text-end px-5 whitespace-nowrap dark:bg-blue-500 transition duration-500"
+            style="width: 70%"
+          >
+            70%
+          </div>
+        </div>
+        <!-- End Progress -->
+        <!-- counter -->
+        <div class="flex flex-row gap-3 justify-between w-[70%]">
+          <div class="flex flex-col justify-center items-center">
+            <h2 class="text-[#1dbf73] text-[60px] font-nunito font-semibold">
+              100
+            </h2>
+            <h3 class="text[#353535] text-[18px]">Our Staff</h3>
+          </div>
+          <div class="flex flex-col justify-center items-center">
+            <h2 class="text-[#1dbf73] text-[60px] font-nunito font-semibold">
+              200
+            </h2>
+            <h3 class="text[#353535] text-[18px]">Our Clients</h3>
+          </div>
+          <div class="flex flex-col justify-center items-center">
+            <h2 class="text-[#1dbf73] text-[60px] font-nunito font-semibold">
+              300
+            </h2>
+            <h3 class="text[#353535] text-[18px]">Completed Projects</h3>
+          </div>
+          <div class="flex flex-col justify-center items-center">
+            <h2 class="text-[#1dbf73] text-[60px] font-nunito font-semibold">
+              400
+            </h2>
+            <h3 class="text[#353535] text-[18px]">Running Projects</h3>
+          </div>
+        </div>
+      </section>
+      <!-- Our Portfolio -->
+      <section
+        class="flex flex-col justify-center items-center bg-[#f2f2f2] pt-12 gap-6"
+      >
+        <div
+          class="text-[#353535] text-[32px] uppercase border-b-3 border-[#353535] border-dashed"
+        >
+          <h2>Our Portfolio</h2>
+        </div>
+        <div>
+          <p class="text-wrap w-[600px] text-[#656565] text-center pb-7">
+            Integer sollicitudin sed nulla non consequat. Nullam vitae erat quis
+            leo accumsan ullamcorper. Suspendisse leo purus, pellentesque
+            posuere.
+          </p>
+        </div>
+        <!-- ul for portfolio -->
+        <div class="uppercase flex flex-row list-none text-white">
+          <ul
+            class="flex flex-row gap-7 bg-[#353535] text-[12px] h-4 p-4 hover:bg-[#1dbf73]"
+          >
+            <li class="hover:bg-[#1dbf73]">All</li>
+            <li class="hover:bg-[#1dbf73]">Web Design</li>
+            <li>web development</li>
+            <li>App design</li>
+            <li>app development</li>
+          </ul>
+        </div>
+      </section>
     </main>
 
     <div id="app"></div>
