@@ -598,10 +598,50 @@
             <h2 class="price-amount">9.<span>99</span></h2>
             <p class="price-date">Per Month</p>
           </div>
-          <ul class="price-details">
-            <li>
-              <i class="ion-md-checkmark"></i><strong>HTML5</strong> and
-              <strong>CSS3</strong>
+          <ul class="price-details flex-col">
+            <li class="flex flex-row">
+              <svg
+                width="18px"
+                height="18px"
+                viewBox="0 0 24 24"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-labelledby="okIconTitle"
+                stroke="#1dbf73"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                color="#000000"
+              >
+                <title id="okIconTitle">Ok</title>
+                <polyline points="4 13 9 18 20 7" />
+              </svg>
+              <p class="text-[#656565] font-semibold">
+                HTML5 <span class="font-light">and</span> CSS3
+              </p>
+            </li>
+            <li class="flex flex-row">
+              <svg
+                width="18px"
+                height="18px"
+                viewBox="0 0 24 24"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-labelledby="okIconTitle"
+                stroke="#1dbf73"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                color="#000000"
+              >
+                <title id="okIconTitle">Ok</title>
+                <polyline points="4 13 9 18 20 7" />
+              </svg>
+              <p class="text-[#656565] font-semibold">
+                BootStrap <span class="font-light">4</span>
+              </p>
             </li>
             <li>
               <i class="ion-md-checkmark"></i><strong>Bootstrap 4</strong>
@@ -687,6 +727,25 @@
       <section class="flex flex-col justify-center items-center p-8 gap-6 mx-4">
         <!-- Progress -->
         <div
+          class="flex w-full h-8 bg-gray-200 overflow-hidden dark:bg-neutral-700 hidden"
+          role="progressbar"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <div class="bg-green-600 hidden">
+            <span class="text-white px-2 py-2">Html</span>
+          </div>
+          <div
+            class="flex flex-col justify-center h-9 overflow-hidden bg-green-600 text-md text-white text-end px-5 whitespace-nowrap dark:bg-blue-500 transition duration-500"
+            style="width: 100%"
+          >
+            100%
+          </div>
+        </div>
+
+        <!-- فثسف -->
+        <div
           class="flex w-full h-8 bg-gray-200 overflow-hidden dark:bg-neutral-700"
           role="progressbar"
           aria-valuenow="100"
@@ -694,7 +753,7 @@
           aria-valuemax="100"
         >
           <div class="bg-green-600">
-            <span class="text-white px-2 py-2">Html</span>
+            <span class="text-white px-2 py-2">HTML</span>
           </div>
           <div
             class="flex flex-col justify-center h-9 overflow-hidden bg-green-600 text-md text-white text-end px-5 whitespace-nowrap dark:bg-blue-500 transition duration-500"
