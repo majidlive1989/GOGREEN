@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>price</title>
+  </head>
+  <body class="h-screen">
+    <header
+      id="changeHeadColor"
+      class="flex items-center justify-between py-6 px-20 w-full fixed top-0 right-0 z-50"
+    >
+      <h2 class="text-[34px] font-bold text-[#1dbf73] hover:text-white">
+        GO GREEN
+      </h2>
+      <ul
+        class="group flex *:text-white gap-5 *:hover:text-[#1dbf73] *:text-[14px] *:hover:transition-all"
+      >
+        <li><a href="./index.html">HOME</a></li>
+        <li><a href="./about.html">ABOUT</a></li>
+        <li><a href="./services.html">SERVICES</a></li>
+        <li><a href="./portfolio.html">PORTFOLIO</a></li>
+        <li><a href="./price.html">PRICE</a></li>
+        <li class="flex gap-2 items-center relative">
+          <a id="selectBar" href=".">DROPDOWN</a>
+          <svg
+            class="rotate-90"
+            width="18px"
+            height="18px"
+            viewBox="0 0 48 48"
+            version="1"
+            xmlns="http://www.w3.org/2000/svg"
+            enable-background="new 0 0 48 48"
+          >
+            <polygon
+              class="group-hover:fill-[#1dbf73]"
+              fill="white"
+              points="17.1,5 14,8.1 29.9,24 14,39.9 17.1,43 36,24"
+            />
+          </svg>
+          <ul
+            id="showSelectBar"
+            class="flex flex-col show bg-white absolute top-10 right-0 w-48 py-4 pr-8 pl-4 gap-2 *:text-[14px] *:text-black *:hover:text-[#1dbf73]"
+          >
+            <li>Dropdown Menu</li>
+            <li>Dropdown Menu</li>
+            <li>Dropdown Menu</li>
+            <li>Dropdown Menu</li>
+            <li>Dropdown Menu</li>
+          </ul>
+        </li>
+        <li><a href=".">CONTACT</a></li>
+      </ul>
+    </header>
+    <section class="relative">
+      <div
+        class="beforeBg flex justify-center items-center top-0 left-0 h-70 bg-[url(src/img/banner.jpg)] bg-no-repeat bg-cover"
+      >
+        <p
+          class="text-white z-50 border-1 border-white px-6 py-4 items-end-safe"
+        >
+          <a href="./index.html" class="hover:text-[#1dbf73]">Home</a> |
+          <a href="./contact.html" class="hover:text-[#1dbf73]">Contact</a>
+        </p>
+      </div>
+    </section>
+    <!-- Our Portfolio -->
+    <section
+      class="flex flex-col justify-center items-center bg-[#f2f2f2] pt-12 pb-8 gap-6"
+    >
+      <div
+        class="text-[#353535] text-[32px] uppercase border-b-3 border-[#353535] border-dashed"
+      >
+        <h2>Our Portfolio</h2>
+      </div>
+      <div>
+        <p class="text-wrap w-[600px] text-[#656565] text-center pb-7">
+          Integer sollicitudin sed nulla non consequat. Nullam vitae erat quis
+          leo accumsan ullamcorper. Suspendisse leo purus, pellentesque posuere.
+        </p>
+      </div>
+      <!-- ul for portfolio -->
+      <!-- <div class="uppercase flex flex-row list-none text-white">
+          <ul
+            class="flex flex-row gap-7 bg-[#353535] text-[12px] h-4 p-4 hover:bg-[#1dbf73]"
+          >
+            <li class="hover:bg-[#1dbf73]">All</li>
+            <li class="hover:bg-[#1dbf73]">Web Design</li>
+            <li>web development</li>
+            <li>App design</li>
+            <li>app development</li>
+          </ul>
+        </div> -->
+      <div class="portfolio-filters-container mb-8">
+        <ul
+          class="portfolio-filters uppercase flex flex-row list-none text-white bg-[#353535] text-[12px] p-4"
+        >
+          <li
+            class="cursor-pointer px-4 py-2 hover:bg-[#1dbf73] transition-colors duration-200 active"
+          >
+            All
+          </li>
+          <li
+            class="cursor-pointer px-4 py-2 hover:bg-[#1dbf73] transition-colors duration-200"
+          >
+            Web Design
+          </li>
+          <li
+            class="cursor-pointer px-4 py-2 hover:bg-[#1dbf73] transition-colors duration-200"
+          >
+            web development
+          </li>
+          <li
+            class="cursor-pointer px-4 py-2 hover:bg-[#1dbf73] transition-colors duration-200"
+          >
+            App design
+          </li>
+          <li
+            class="cursor-pointer px-4 py-2 hover:bg-[#1dbf73] transition-colors duration-200"
+          >
+            app development
+          </li>
+        </ul>
+      </div>
+
+      <!-- کانتینر آیتم‌های پورتفولیو -->
+      <div
+        id="portfolio-grid"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+      >
+        <!-- آیتم‌های پورتفولیو اینجا رندر می‌شوند -->
+      </div>
+    </section>
+    <!-- <section class="flex flex-col p-14 bg-[#f2f2f2] gap-8">
+      <div class="flex flex-col items-center">
+        <p class="text-[32px] text-black font-semibold">CONTACT US</p>
+        <span class="text-[32px] text-black font-bold">---------</span>
+        <p class="text-lg text-[#656565] font-light px-[330px] text-center">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+          ullamcorper pharetra ligula nec hendrerit. Ut eu libero nec magna
+          placerat fringilla.
+        </p>
+      </div>
+      <div class="flex gap-4 px-40 justify-center">
+        <div
+          class="flex flex-col py-8 px-8 h-full w-70 bg-white justify-center items-center gap-2 hover:shadow-md"
+        >
+          <svg
+            fill="#1dbf73"
+            width="50px"
+            height="50px"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,22H12v0a12.816,12.816,0,0,0,7.988-12A7.992,7.992,0,1,0,4.008,10,12.816,12.816,0,0,0,12,22v0ZM10,10a2,2,0,1,1,2,2A2,2,0,0,1,10,10Z"
+            />
+          </svg>
+          <p class="text-[#353535] font-semibold">ADDRESS</p>
+          <p class="text-[#353535] font-light">Your Location, City, Country</p>
+        </div>
+        <div
+          class="flex flex-col py-8 px-8 h-full w-70 bg-white justify-center items-center gap-2 hover:shadow-md"
+        >
+          <svg
+            width="50px"
+            height="50px"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+          >
+            <path
+              fill="#1dbf73"
+              d="M20 16v4c-2.758 0-5.07-.495-7-1.325-3.841-1.652-6.176-4.63-7.5-7.675C4.4 8.472 4 5.898 4 4h4l1 4-3.5 3c1.324 3.045 3.659 6.023 7.5 7.675L16 15l4 1z"
+            />
+            <path
+              stroke="#1dbf73"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 18.675c1.93.83 4.242 1.325 7 1.325v-4l-4-1-3 3.675zm0 0C9.159 17.023 6.824 14.045 5.5 11m0 0C4.4 8.472 4 5.898 4 4h4l1 4-3.5 3z"
+            />
+          </svg>
+          <p class="text-[#353535] font-semibold">PHONE NUMBER</p>
+          <p class="text-[#353535] font-light">+123-456-789</p>
+        </div>
+        <div
+          class="flex flex-col py-8 px-8 h-full w-70 bg-white justify-center items-center gap-2 hover:shadow-md"
+        >
+          <svg
+            fill="#1dbf73"
+            xmlns="http://www.w3.org/2000/svg"
+            width="50px"
+            height="50px"
+            viewBox="0 0 52 52"
+            enable-background="new 0 0 52 52"
+            xml:space="preserve"
+          >
+            <g>
+              <path
+                d="M24.9,30.1c0.6,0.6,1.5,0.6,2.1,0l22.6-21C50,8.3,49.9,7,48.3,7L3.6,7.1c-1.2,0-2.2,1.1-1.3,2.1L24.9,30.1z
+		"
+              />
+              <path
+                d="M50,17.3c0-1-1.2-1.6-2-0.9L30.3,32.7c-1.2,1.1-2.7,1.7-4.3,1.7s-3.1-0.6-4.3-1.6L4.1,16.4
+		c-0.8-0.7-2-0.2-2,0.9C2,17,2,40,2,40c0,2.2,1.8,4,4,4h40c2.2,0,4-1.8,4-4C50,34,50,21.8,50,17.3z"
+              />
+            </g>
+          </svg>
+          <p class="text-[#353535] font-semibold">EMAIL</p>
+          <p class="text-[#353535] font-light">sudeepacharjeegp@gmail.com</p>
+        </div>
+      </div>
+      <div class="flex gap-18 px-40 justify-center">
+        <div><img class="w-100 h-full" src="src/img/far.svg" /></div>
+        <div class="flex flex-col bg-white p-8 gap-4 hover:shadow-md">
+          <div class="flex gap-4">
+            <input
+              class="border-1 w-40 border-gray-300 p-2 focus:outline-[#1dbf73]"
+              type="text"
+              placeholder="Your Name"
+            />
+            <input
+              class="border-1 w-40 border-gray-300 p-2 focus:outline-[#1dbf73]"
+              type="email"
+              placeholder="Your Email"
+            />
+          </div>
+          <div class="flex flex-col gap-4 items-start">
+            <input
+              class="border-1 w-full border-gray-300 p-2 focus:outline-[#1dbf73]"
+              type="text"
+              placeholder="Subject"
+            />
+            <textarea
+              class="border-1 w-full h-32 border-gray-300 p-2 focus:outline-[#1dbf73]"
+              placeholder="Message"
+            ></textarea>
+            <button
+              class="py-2 px-4 text-3 text-white bg-[#1dbf73] font-light z-30 hover:text-white hover:bg-gray-800 transition-all"
+            >
+              Send Message
+            </button>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <footer class="flex flex-col">
+      <section
+        class="grid grid-cols-4 py-14 px-40 bg-[#1dbf73] gap-8 justify-between"
+      >
+        <div class="flex flex-col gap-4">
+          <h4 class="text-[34px] text-white font-bold">GO GREEN</h4>
+          <p class="text-[16px] text-white font-light">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a
+            tortor commodo, sollicitudin velit nec, lobortis erat. Sed rutrum
+            metus ac augue scelerisque, vel commodo erat commodo. Mauris quis
+            mattis sem. Maecenas dictum nunc.
+          </p>
+        </div>
+        <div class="flex flex-col gap-3">
+          <div class="flex flex-col">
+            <p class="text-white font-bold">ABOUT US</p>
+            <span class="text-white font-bold">--------------</span>
+          </div>
+          <div class="flex flex-col gap-3">
+            <div class="flex gap-2 items-center border-b-2 w-60 border-white">
+              <p class="text-white">></p>
+              <p class="text-[16px] text-white font-light hover:text-[#353535]">
+                Home
+              </p>
+            </div>
+            <div class="flex gap-2 items-center border-b-2 w-60 border-white">
+              <p class="text-white">></p>
+              <p class="text-[16px] text-white font-light hover:text-[#353535]">
+                About us
+              </p>
+            </div>
+            <div class="flex gap-2 items-center border-b-2 w-60 border-white">
+              <p class="text-white">></p>
+              <p class="text-[16px] text-white font-light hover:text-[#353535]">
+                Our services
+              </p>
+            </div>
+            <div class="flex gap-2 items-center border-b-2 w-60 border-white">
+              <p class="text-white">></p>
+              <p class="text-[16px] text-white font-light hover:text-[#353535]">
+                Terms & condition
+              </p>
+            </div>
+            <div class="flex gap-2 items-center border-b-2 w-60 border-white">
+              <p class="text-white">></p>
+              <p class="text-[16px] text-white font-light hover:text-[#353535]">
+                Privacy policy
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <div class="flex flex-col">
+            <p class="text-white font-bold">CONTACT US</p>
+            <span class="text-white font-bold">--------------</span>
+          </div>
+          <div>
+            <p class="text-[18px] text-white font-light">Iran</p>
+            <p class="text-[18px] text-white font-light">Tehran</p>
+            <p class="text-[18px] text-white font-light">Your Country</p>
+            <p class="text-[18px] text-white font-light">
+              <span class="font-bold">Phone:</span> +989361306835
+            </p>
+            <p class="text-[18px] text-white font-light">
+              <span class="font-bold">Email:</span> majid.live@gmail.com
+            </p>
+          </div>
+          <div class="flex gap-3">
+            <div class="p-2 bg-white rounded-full group hover:bg-[#353535]">
+              <svg
+                class="group-hover:fill-white"
+                width="20px"
+                height="20px"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#1dbf73"
+              >
+                <path
+                  d="M15 3.784a5.63 5.63 0 0 1-.65.803 6.058 6.058 0 0 1-.786.68 5.442 5.442 0 0 1 .014.377c0 .574-.061 1.141-.184 1.702a8.467 8.467 0 0 1-.534 1.627 8.444 8.444 0 0 1-1.264 2.04 7.768 7.768 0 0 1-1.72 1.521 7.835 7.835 0 0 1-2.095.95 8.524 8.524 0 0 1-2.379.329 8.178 8.178 0 0 1-2.293-.325A7.921 7.921 0 0 1 1 12.52a5.762 5.762 0 0 0 4.252-1.19 2.842 2.842 0 0 1-2.273-1.19 2.878 2.878 0 0 1-.407-.8c.091.014.181.026.27.035a2.797 2.797 0 0 0 1.022-.089 2.808 2.808 0 0 1-.926-.362 2.942 2.942 0 0 1-.728-.633 2.839 2.839 0 0 1-.65-1.822v-.033c.402.227.837.348 1.306.362a2.943 2.943 0 0 1-.936-1.04 2.955 2.955 0 0 1-.253-.649 2.945 2.945 0 0 1 .007-1.453c.063-.243.161-.474.294-.693.364.451.77.856 1.216 1.213a8.215 8.215 0 0 0 3.008 1.525 7.965 7.965 0 0 0 1.695.263 2.15 2.15 0 0 1-.058-.325 3.265 3.265 0 0 1-.017-.331c0-.397.075-.77.226-1.118a2.892 2.892 0 0 1 1.528-1.528 2.79 2.79 0 0 1 1.117-.225 2.846 2.846 0 0 1 2.099.909 5.7 5.7 0 0 0 1.818-.698 2.815 2.815 0 0 1-1.258 1.586A5.704 5.704 0 0 0 15 3.785z"
+                />
+              </svg>
+            </div>
+            <div class="p-2 bg-white rounded-full group hover:bg-[#353535]">
+              <svg
+                class="group-hover:fill-white"
+                fill="#1dbf73"
+                width="20px"
+                height="20px"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                data-name="Layer 1"
+              >
+                <path
+                  d="M20.9,2H3.1A1.1,1.1,0,0,0,2,3.1V20.9A1.1,1.1,0,0,0,3.1,22h9.58V14.25h-2.6v-3h2.6V9a3.64,3.64,0,0,1,3.88-4,20.26,20.26,0,0,1,2.33.12v2.7H17.3c-1.26,0-1.5.6-1.5,1.47v1.93h3l-.39,3H15.8V22h5.1A1.1,1.1,0,0,0,22,20.9V3.1A1.1,1.1,0,0,0,20.9,2Z"
+                />
+              </svg>
+            </div>
+            <div class="p-2 bg-white rounded-full group hover:bg-[#353535]">
+              <svg
+                class="group-hover:fill-white"
+                fill="#1dbf73"
+                width="20px"
+                height="20px"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                data-name="Layer 1"
+              >
+                <path
+                  d="M20.47,2H3.53A1.45,1.45,0,0,0,2.06,3.43V20.57A1.45,1.45,0,0,0,3.53,22H20.47a1.45,1.45,0,0,0,1.47-1.43V3.43A1.45,1.45,0,0,0,20.47,2ZM8.09,18.74h-3v-9h3ZM6.59,8.48h0a1.56,1.56,0,1,1,0-3.12,1.57,1.57,0,1,1,0,3.12ZM18.91,18.74h-3V13.91c0-1.21-.43-2-1.52-2A1.65,1.65,0,0,0,12.85,13a2,2,0,0,0-.1.73v5h-3s0-8.18,0-9h3V11A3,3,0,0,1,15.46,9.5c2,0,3.45,1.29,3.45,4.06Z"
+                />
+              </svg>
+            </div>
+            <div class="p-2 bg-white rounded-full group hover:bg-[#353535]">
+              <svg
+                class="group-hover:fill-white"
+                fill="#1dbf73"
+                width="20px"
+                height="20px"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                data-name="Layer 1"
+              >
+                <path
+                  d="M17.34,5.46h0a1.2,1.2,0,1,0,1.2,1.2A1.2,1.2,0,0,0,17.34,5.46Zm4.6,2.42a7.59,7.59,0,0,0-.46-2.43,4.94,4.94,0,0,0-1.16-1.77,4.7,4.7,0,0,0-1.77-1.15,7.3,7.3,0,0,0-2.43-.47C15.06,2,14.72,2,12,2s-3.06,0-4.12.06a7.3,7.3,0,0,0-2.43.47A4.78,4.78,0,0,0,3.68,3.68,4.7,4.7,0,0,0,2.53,5.45a7.3,7.3,0,0,0-.47,2.43C2,8.94,2,9.28,2,12s0,3.06.06,4.12a7.3,7.3,0,0,0,.47,2.43,4.7,4.7,0,0,0,1.15,1.77,4.78,4.78,0,0,0,1.77,1.15,7.3,7.3,0,0,0,2.43.47C8.94,22,9.28,22,12,22s3.06,0,4.12-.06a7.3,7.3,0,0,0,2.43-.47,4.7,4.7,0,0,0,1.77-1.15,4.85,4.85,0,0,0,1.16-1.77,7.59,7.59,0,0,0,.46-2.43c0-1.06.06-1.4.06-4.12S22,8.94,21.94,7.88ZM20.14,16a5.61,5.61,0,0,1-.34,1.86,3.06,3.06,0,0,1-.75,1.15,3.19,3.19,0,0,1-1.15.75,5.61,5.61,0,0,1-1.86.34c-1,.05-1.37.06-4,.06s-3,0-4-.06A5.73,5.73,0,0,1,6.1,19.8,3.27,3.27,0,0,1,5,19.05a3,3,0,0,1-.74-1.15A5.54,5.54,0,0,1,3.86,16c0-1-.06-1.37-.06-4s0-3,.06-4A5.54,5.54,0,0,1,4.21,6.1,3,3,0,0,1,5,5,3.14,3.14,0,0,1,6.1,4.2,5.73,5.73,0,0,1,8,3.86c1,0,1.37-.06,4-.06s3,0,4,.06a5.61,5.61,0,0,1,1.86.34A3.06,3.06,0,0,1,19.05,5,3.06,3.06,0,0,1,19.8,6.1,5.61,5.61,0,0,1,20.14,8c.05,1,.06,1.37.06,4S20.19,15,20.14,16ZM12,6.87A5.13,5.13,0,1,0,17.14,12,5.12,5.12,0,0,0,12,6.87Zm0,8.46A3.33,3.33,0,1,1,15.33,12,3.33,3.33,0,0,1,12,15.33Z"
+                />
+              </svg>
+            </div>
+            <div class="p-2 bg-white rounded-full group hover:bg-[#353535]">
+              <svg
+                class="group-hover:fill-white"
+                fill="#1dbf73"
+                width="20px"
+                height="20px"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                data-name="Layer 1"
+              >
+                <path
+                  d="M23,9.71a8.5,8.5,0,0,0-.91-4.13,2.92,2.92,0,0,0-1.72-1A78.36,78.36,0,0,0,12,4.27a78.45,78.45,0,0,0-8.34.3,2.87,2.87,0,0,0-1.46.74c-.9.83-1,2.25-1.1,3.45a48.29,48.29,0,0,0,0,6.48,9.55,9.55,0,0,0,.3,2,3.14,3.14,0,0,0,.71,1.36,2.86,2.86,0,0,0,1.49.78,45.18,45.18,0,0,0,6.5.33c3.5.05,6.57,0,10.2-.28a2.88,2.88,0,0,0,1.53-.78,2.49,2.49,0,0,0,.61-1,10.58,10.58,0,0,0,.52-3.4C23,13.69,23,10.31,23,9.71ZM9.74,14.85V8.66l5.92,3.11C14,12.69,11.81,13.73,9.74,14.85Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <div class="flex flex-col">
+            <p class="text-white font-bold">SUBSCRIPTION</p>
+            <span class="text-white font-bold">--------------</span>
+          </div>
+          <div>
+            <p class="text-[16px] text-white font-light">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type.
+            </p>
+          </div>
+          <div class="flex">
+            <input class="bg-white" type="text" />
+            <input
+              class="bg-[#353535] py-2 px-3 text-white"
+              type="submit"
+              value="Subscribe"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="flex flex-col justify-center items-center bg-black p-8">
+        <p class="text-[18px] text-[#656565]">
+          © Copyright <span class="text-[#1dbf73]">GO Green</span>. All Rights
+          Reserved
+        </p>
+        <p class="text-[18px] text-[#656565]">
+          Template By <span class="text-[#1dbf73]">@MJ</span>
+        </p>
+      </section>
+    </footer>
+    <script src="vendor/isotope/isotope.pkgd.min.js"></script>
+    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="./src/portfolio.ts"></script>
+  </body>
+</html>
