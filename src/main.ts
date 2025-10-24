@@ -351,7 +351,7 @@ class PortfolioFilterManager {
         id: 2,
         title: "Mobile App Development",
         category: "app-development",
-        image: "https://via.placeholder.com/300x200/353535/ffffff?text=App+Dev",
+        image: "../src/img/portfolio-4.jpg",
         description: "Android and iOS mobile app development",
         tags: ["mobile", "android", "ios"],
       },
@@ -359,7 +359,7 @@ class PortfolioFilterManager {
         id: 3,
         title: "UI/UX Design",
         category: "app-design",
-        image: "https://via.placeholder.com/300x200/ff6b6b/ffffff?text=UI/UX",
+        image: "../src/img/portfolio-6.jpg",
         description: "Professional user experience design",
         tags: ["ui", "ux", "design"],
       },
@@ -367,8 +367,7 @@ class PortfolioFilterManager {
         id: 4,
         title: "E-commerce Website Development",
         category: "web-development",
-        image:
-          "https://via.placeholder.com/300x200/4ecdc4/ffffff?text=E-Commerce",
+        image: "../src/img/portfolio-2.jpg",
         description: "E-commerce website development with advanced features",
         tags: ["ecommerce", "development", "web"],
       },
@@ -376,8 +375,7 @@ class PortfolioFilterManager {
         id: 5,
         title: "Project Management App",
         category: "app-development",
-        image:
-          "https://via.placeholder.com/300x200/45b7d1/ffffff?text=Project+App",
+        image: "../src/img/portfolio-2.jpg",
         description: "Project and task management application",
         tags: ["productivity", "management", "mobile"],
       },
@@ -385,7 +383,7 @@ class PortfolioFilterManager {
         id: 6,
         title: "Enterprise Portal",
         category: "web-development",
-        image: "https://via.placeholder.com/300x200/96ceb4/ffffff?text=Portal",
+        image: "../src/img/portfolio-4.jpg",
         description: "Enterprise portal development with admin panel",
         tags: ["portal", "admin", "enterprise"],
       },
@@ -393,8 +391,7 @@ class PortfolioFilterManager {
         id: 7,
         title: "Mobile App",
         category: "app-design",
-        image:
-          "https://via.placeholder.com/300x200/feca57/ffffff?text=Mobile+Design",
+        image: "../src/img/portfolio-3.jpg",
         description: "Mobile Application Design",
         tags: ["mobile", "design", "interface"],
       },
@@ -402,8 +399,7 @@ class PortfolioFilterManager {
         id: 8,
         title: "Web Design",
         category: "web-design",
-        image:
-          "https://via.placeholder.com/300x200/ff9ff3/ffffff?text=Corporate",
+        image: "../src/img/portfolio-5.jpg",
         description: "Modern Website Design",
         tags: ["corporate", "business", "design"],
       },
@@ -412,7 +408,6 @@ class PortfolioFilterManager {
     this.filteredItems = [...this.items];
     this.renderPortfolioItems();
   }
-
   // Set up event listeners for filters
   private setupEventListeners(): void {
     this.filterItems.forEach((liItem, index) => {
@@ -526,29 +521,36 @@ class PortfolioFilterManager {
     itemElement.setAttribute("data-category", item.category);
 
     itemElement.innerHTML = `
-            <div class="aspect-w-16 aspect-h-12 bg-gray-100 overflow-hidden">
-                <img src="${item.image}" alt="${item.title}" 
-                     class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center">
-                    <div class="text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
-                        <h3 class="text-lg font-bold mb-2">${item.title}</h3>
-                        <p class="text-sm mb-3 px-4">${item.description}</p>
-                        <div class="flex justify-center space-x-2 space-x-reverse mb-3">
-                            ${item.tags
-                              .map(
-                                (tag) =>
-                                  `<span class="bg-[#1dbf73] text-xs px-2 py-1 rounded">${tag}</span>`
-                              )
-                              .join("")}
-                        </div>
-                        <button class="view-project bg-white text-[#353535] hover:bg-gray-100 px-4 py-2 rounded text-sm font-medium transition-colors duration-200">
-                            See Project
-                        </button>
-                    </div>
+    <div class="relative overflow-hidden rounded-lg bg-gray-100 group">
+        <!-- Image Container with Black Glow -->
+        <div class="relative h-48 overflow-hidden drop-shadow-2xl">
+            <img src="${item.image}" alt="${item.title}" 
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
+        
+        <!-- Content -->
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+            <div class="text-center text-white p-4">
+                <h3 class="text-lg font-bold mb-2">${item.title}</h3>
+                <p class="text-sm mb-3">${item.description}</p>
+                <div class="flex justify-center flex-wrap gap-2 mb-3">
+                    ${item.tags
+                      .map(
+                        (tag) =>
+                          `<span class="bg-[#1dbf73] text-xs px-2 py-1 rounded">${tag}</span>`
+                      )
+                      .join("")}
                 </div>
+                <button class="view-project bg-white text-[#353535] hover:bg-gray-100 px-4 py-2 rounded text-sm font-medium transition-colors duration-200">
+                    See Project
+                </button>
             </div>
-           
-        `;
+        </div>
+    </div>
+`;
 
     // Add event listener for view project button
     const viewButton = itemElement.querySelector(
