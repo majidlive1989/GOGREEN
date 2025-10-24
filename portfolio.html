@@ -7,50 +7,33 @@
   </head>
   <body class="h-screen">
     <header
-      id="changeHeadColor"
-      class="flex items-center justify-between py-6 px-20 w-full fixed top-0 right-0 z-50"
+      class="flex flex-row justify-between p-9 z-20 fixed w-full bg-black opacity-45"
     >
-      <h2 class="text-[34px] font-bold text-[#1dbf73] hover:text-white">
-        GO GREEN
-      </h2>
-      <ul
-        class="group flex *:text-white gap-5 *:hover:text-[#1dbf73] *:text-[14px] *:hover:transition-all"
-      >
-        <li><a href="./index.html">HOME</a></li>
-        <li><a href="./about.html">ABOUT</a></li>
-        <li><a href="./services.html">SERVICES</a></li>
-        <li><a href="./portfolio.html">PORTFOLIO</a></li>
-        <li><a href="./price.html">PRICE</a></li>
-        <li class="flex gap-2 items-center relative">
-          <a id="selectBar" href=".">DROPDOWN</a>
-          <svg
-            class="rotate-90"
-            width="18px"
-            height="18px"
-            viewBox="0 0 48 48"
-            version="1"
-            xmlns="http://www.w3.org/2000/svg"
-            enable-background="new 0 0 48 48"
-          >
-            <polygon
-              class="group-hover:fill-[#1dbf73]"
-              fill="white"
-              points="17.1,5 14,8.1 29.9,24 14,39.9 17.1,43 36,24"
-            />
-          </svg>
+      <div class="flex flex-row justify-between w-full">
+        <div class="text-green-500 text-4xl font-bold font-roboto">
+          <a href="#">GO GREEN</a>
+        </div>
+        <div class="flex flex-row left-7">
           <ul
-            id="showSelectBar"
-            class="flex flex-col show bg-white absolute top-10 right-0 w-48 py-4 pr-8 pl-4 gap-2 *:text-[14px] *:text-black *:hover:text-[#1dbf73]"
+            class="list-none flex flex-row gap-4 text-white *:hover:text-green-500"
           >
-            <li>Dropdown Menu</li>
-            <li>Dropdown Menu</li>
-            <li>Dropdown Menu</li>
-            <li>Dropdown Menu</li>
-            <li>Dropdown Menu</li>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./services.html">SERVICES</a></li>
+            <li><a href="./portfolio.html">PORTFOLIO</a></li>
+            <li><a href="./price.html">PRICE</a></li>
+            <li>
+              <select name="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+              </select>
+            </li>
+            <li>CONTACT</li>
           </ul>
-        </li>
-        <li><a href=".">CONTACT</a></li>
-      </ul>
+        </div>
+      </div>
     </header>
     <section class="relative">
       <div
